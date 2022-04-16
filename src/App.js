@@ -7,6 +7,7 @@ const WarningComponent = () => {
 
 function App() {
 	let noUsed = 1
+	let noUsed2 = 2
 
 	return (
 		<div className="App">
