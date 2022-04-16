@@ -1,6 +1,10 @@
 import logo from './logo.svg'
 import './App.css'
 
+const WarningComponent = () => {
+	return <div>WarningComponent</div>
+}
+
 function App() {
 	let noUsed = 1
 
