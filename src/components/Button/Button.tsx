@@ -1,18 +1,19 @@
 import React, { FC } from 'react'
 
-type ButtonType = 'button' | 'submit'
-type ButtonVariant = 'primary' | 'big' | 'outlined'
+import { ButtonType, ButtonVariant } from './Button.types'
+import { ButtonStyled } from './Button.styled'
 
 interface ButtonProps {
 	children: string
-	type: ButtonType
-	variant: ButtonVariant
+	type?: ButtonType
+	variant?: ButtonVariant
+	width?: string
 }
 
-export const Button: FC<ButtonProps> = ({ children, type, variant }) => {
+export const Button: FC<ButtonProps> = ({ children, type, variant, width }) => {
 	return (
-		<button type={type} className={variant}>
+		<ButtonStyled type={type} variant={variant} width={width}>
 			{children}
-		</button>
+		</ButtonStyled>
 	)
 }
