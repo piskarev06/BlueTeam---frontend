@@ -15,7 +15,7 @@ export default {
 			control: {
 				type: 'radio',
 			},
-			options: ['search', 'primary'],
+			options: ['search', 'sign', 'primary'],
 		},
 		width: {
 			type: 'string',
@@ -30,6 +30,12 @@ export const Primary = Template.bind({})
 Primary.args = {
 	variant: 'primary',
 	placeholder: 'Type something',
+}
+
+export const Sign = Template.bind({})
+Sign.args = {
+	variant: 'sign',
+	placeholder: 'Enter name',
 }
 
 export const Search = Template.bind({})

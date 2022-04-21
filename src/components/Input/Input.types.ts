@@ -1,1 +1,1 @@
-export type InputVariant = 'primary' | 'search'
+export type InputVariant = 'primary' | 'sign' | 'search'
