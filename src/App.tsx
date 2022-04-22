@@ -1,16 +1,19 @@
 import { ThemeProvider } from 'styled-components'
+import { BrowserRouter } from 'react-router-dom'
 
 import { GlobalStyles } from './styles/global'
 import { baseTheme } from './styles/themes/baseTheme/baseTheme'
 
-import { Authorization } from './pages/AuthorizationPage/Authorization'
+import { RouterProvider } from './hocs/RouterProvider'
 
 const App = () => {
 	return (
-		<ThemeProvider theme={baseTheme}>
-			<Authorization />
-			<GlobalStyles />
-		</ThemeProvider>
+		<BrowserRouter>
+			<ThemeProvider theme={baseTheme}>
+				<RouterProvider />
+				<GlobalStyles />
+			</ThemeProvider>
+		</BrowserRouter>
 	)
 }
 
