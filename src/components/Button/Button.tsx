@@ -8,11 +8,12 @@ interface ButtonProps {
 	type?: ButtonType
 	variant?: ButtonVariant
 	width?: string
+	disabled?: boolean
 }
 
-export const Button: FC<ButtonProps> = ({ children, type, variant, width }) => {
+export const Button: FC<ButtonProps> = ({ children, type, variant, width, disabled }) => {
 	return (
-		<ButtonStyled type={type} variant={variant} width={width}>
+		<ButtonStyled disabled={disabled} type={type} variant={variant} width={width}>
 			{children}
 		</ButtonStyled>
 	)

@@ -7,8 +7,8 @@ export default {
 	component: Input,
 	argTypes: {
 		placeholder: {
-			type: 'string',
 			description: 'Placeholder инпута',
+			type: 'string',
 		},
 		variant: {
 			description: 'Вариант внешнего вида инпута',
@@ -18,8 +18,12 @@ export default {
 			options: ['search', 'sign', 'primary'],
 		},
 		width: {
-			type: 'string',
 			description: 'Размер инпута',
+			type: 'string',
+		},
+		invalid: {
+			description: 'Валидность инпута',
+			type: 'boolean',
 		},
 	},
 } as ComponentMeta<typeof Input>
@@ -42,4 +46,11 @@ export const Search = Template.bind({})
 Search.args = {
 	variant: 'search',
 	placeholder: 'Search something',
+}
+
+export const Invalid = Template.bind({})
+Invalid.args = {
+	variant: 'sign',
+	placeholder: 'Enter name',
+	invalid: true,
 }

@@ -7,6 +7,7 @@ interface ButtonStyledProps {
 	type: ButtonType
 	variant: ButtonVariant
 	width: string
+	disabled: boolean
 }
 
 export const ButtonStyled = styled.button<ButtonStyledProps>`
@@ -44,9 +45,16 @@ export const ButtonStyled = styled.button<ButtonStyledProps>`
 
 	color: ${(props) => props.variant === 'outlined' && baseTheme.colors.black};
 	background: ${(props) => props.variant === 'outlined' && `#fff`};
-
 	&:hover {
 		background: ${(props) => props.variant === 'outlined' && baseTheme.colors.accent};
 		color: ${(props) => props.variant === 'outlined' && `#fff`};
+	}
+
+	background: ${(props) => props.disabled && `#425feb75`};
+	border-color: ${(props) => props.disabled && `#425feb75`};
+	cursor: ${(props) => props.disabled && `unset`};
+	&:hover {
+		color: ${(props) => props.disabled && `#fff`};
+		background: ${(props) => props.disabled && `#425feb75`};
 	}
 `

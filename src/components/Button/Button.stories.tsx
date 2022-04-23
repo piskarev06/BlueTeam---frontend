@@ -27,8 +27,12 @@ export default {
 			options: ['button', 'submit'],
 		},
 		width: {
-			type: 'string',
 			description: 'Размер кнопки',
+			type: 'string',
+		},
+		disabled: {
+			description: 'Состояние кнопки',
+			type: 'boolean',
 		},
 	},
 } as ComponentMeta<typeof Button>
@@ -54,4 +58,10 @@ Submit.args = {
 export const Outlined = Template.bind({})
 Outlined.args = {
 	variant: 'outlined',
+}
+
+export const Disabled = Template.bind({})
+Disabled.args = {
+	variant: 'primary',
+	disabled: true,
 }

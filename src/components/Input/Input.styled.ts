@@ -6,6 +6,7 @@ import { InputVariant } from './Input.types'
 interface InputStyledProps {
 	variant?: InputVariant
 	width?: string
+	invalid?: boolean
 }
 
 export const InputStyled = styled.input<InputStyledProps>`
@@ -38,4 +39,6 @@ export const InputStyled = styled.input<InputStyledProps>`
 	&::placeholder {
 		color: ${(props) => props.variant === 'sign' && baseTheme.colors.gray};
 	}
+
+	margin-bottom: ${(props) => props.invalid === true && `5px !important`};
 `

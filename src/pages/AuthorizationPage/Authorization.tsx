@@ -11,11 +11,10 @@ import {
 	SignTabs,
 	SignContent,
 	SignTitle,
-	SignForm,
-	SignInput,
-	SignBtn,
 	SignOr,
 } from './Authorization.styled'
+import { Register } from '../../components/Form/RegisterForm/Register'
+import { Login } from '../../components/Form/LoginForm/Login'
 
 export const Authorization: FC = () => {
 	return (
@@ -40,13 +39,7 @@ export const Authorization: FC = () => {
 							<div className="content__item active" data-content="1">
 								<SignTitle className="h1">Get Started</SignTitle>
 
-								<SignForm>
-									<SignInput variant="sign" type="email" placeholder="Email" />
-									<SignInput variant="sign" type="text" placeholder="Name" />
-									<SignInput variant="sign" type="text" placeholder="Password" />
-
-									<SignBtn type="submit">Sign Up</SignBtn>
-								</SignForm>
+								<Register />
 
 								<SignOr>
 									<span>Or using</span>
@@ -59,12 +52,7 @@ export const Authorization: FC = () => {
 							<div className="content__item" data-content="2">
 								<h1 className="sign__title h1">Welcome Back</h1>
 
-								<SignForm>
-									<SignInput type="email" placeholder="Email" />
-									<SignInput type="text" placeholder="Password" />
-
-									<SignBtn type="submit">Sign In</SignBtn>
-								</SignForm>
+								<Login />
 
 								<SignOr className="sign__or">
 									<span>Or using</span>

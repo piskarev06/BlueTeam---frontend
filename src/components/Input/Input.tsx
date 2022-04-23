@@ -7,8 +7,9 @@ interface InputProps {
 	placeholder: string
 	variant?: InputVariant
 	width?: string
+	invalid?: boolean
 }
 
-export const Input: FC<InputProps> = ({ placeholder, variant, width }) => {
-	return <InputStyled placeholder={placeholder} variant={variant} width={width} />
+export const Input: FC<InputProps> = ({ placeholder, variant, width, invalid }) => {
+	return <InputStyled invalid={invalid} placeholder={placeholder} variant={variant} width={width} />
 }
