@@ -7,8 +7,8 @@ export default {
 	component: Button,
 	argTypes: {
 		children: {
-			type: 'string',
 			description: 'Текст кнопки',
+			type: 'string',
 			defaultValue: 'Click me',
 			name: 'label',
 		},
@@ -18,6 +18,7 @@ export default {
 				type: 'radio',
 			},
 			options: ['big', 'primary', 'outlined', 'submit'],
+			defaultValue: 'primary',
 		},
 		type: {
 			description: 'Вариант типа кнопки',
@@ -25,6 +26,7 @@ export default {
 				type: 'radio',
 			},
 			options: ['button', 'submit'],
+			defaultValue: 'button',
 		},
 		width: {
 			description: 'Размер кнопки',
@@ -33,6 +35,7 @@ export default {
 		disabled: {
 			description: 'Состояние кнопки',
 			type: 'boolean',
+			defaultValue: false,
 		},
 	},
 } as ComponentMeta<typeof Button>

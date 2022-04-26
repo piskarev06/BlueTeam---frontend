@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 
-import { ButtonType, ButtonVariant } from './Button.types'
+import type { ButtonType, ButtonVariant } from './Button.types'
 import { ButtonStyled } from './Button.styled'
 
 interface ButtonProps {

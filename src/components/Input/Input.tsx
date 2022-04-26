@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 
 import { InputStyled } from './Input.styled'
-import { InputVariant } from './Input.types'
+import type { InputVariant } from './Input.types'
 
 interface InputProps {
 	placeholder: string

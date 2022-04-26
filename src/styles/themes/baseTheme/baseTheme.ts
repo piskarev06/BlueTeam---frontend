@@ -1,4 +1,4 @@
-import { ITheme } from './baseTheme.types'
+import type { ITheme } from './baseTheme.types'
 
 export const baseTheme: ITheme = {
 	colors: {

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 import { baseTheme } from './../../styles/themes/baseTheme/baseTheme'
-import { ButtonVariant, ButtonType } from './Button.types'
+import type { ButtonVariant, ButtonType } from './Button.types'
 
 interface ButtonStyledProps {
 	type: ButtonType

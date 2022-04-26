@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 import { baseTheme } from '../../styles/themes/baseTheme/baseTheme'
-import { InputVariant } from './Input.types'
+import type { InputVariant } from './Input.types'
 
 interface InputStyledProps {
 	variant?: InputVariant
@@ -20,6 +20,8 @@ export const InputStyled = styled.input<InputStyledProps>`
 	line-height: 22px;
 
 	color: ${baseTheme.colors.gray};
+
+	transition: 0.3s all linear;
 
 	&::placeholder {
 		font-size: 16px;
@@ -41,4 +43,5 @@ export const InputStyled = styled.input<InputStyledProps>`
 	}
 
 	margin-bottom: ${(props) => props.invalid === true && `5px !important`};
+	border-color: ${(props) => props.invalid === true && `red`};
 `

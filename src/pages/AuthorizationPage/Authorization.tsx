@@ -2,8 +2,6 @@ import React, { FC } from 'react'
 
 //@ts-ignore
 import google from 'assets/images/google.svg'
-//@ts-ignore
-import video from 'assets/video/hi_res.mp4'
 import {
 	SignInner,
 	SignVideo,
@@ -17,6 +15,8 @@ import { Register } from '../../components/Form/RegisterForm/Register'
 import { Login } from '../../components/Form/LoginForm/Login'
 
 export const Authorization: FC = () => {
+	const video = require('assets/video/hi_res.mp4')
+
 	return (
 		<section className="sign">
 			<div className="container">

@@ -24,6 +24,7 @@ export default {
 		invalid: {
 			description: 'Валидность инпута',
 			type: 'boolean',
+			defaultValue: false,
 		},
 	},
 } as ComponentMeta<typeof Input>

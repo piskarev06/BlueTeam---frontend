@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 
-import { LoginInputs } from './Login.types'
+import type { LoginInputs } from './Login.types'
 import { SignForm, SignInput, SignBtn } from '../../../pages/AuthorizationPage/Authorization.styled'
 import { FormError } from '../Form.styled'
 
