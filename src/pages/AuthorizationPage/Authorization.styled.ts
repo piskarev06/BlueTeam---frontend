@@ -1,8 +1,9 @@
 import styled from 'styled-components'
 
-import { baseTheme } from 'styles/themes/baseTheme/baseTheme'
-import { InputStyled } from 'components/Input/Input.styled'
-import { ButtonStyled } from 'components/Button/Button.styled'
+import { baseTheme } from '../../styles/themes/baseTheme/baseTheme'
+import { InputStyled } from '../../components/Input/Input.styled'
+import { ButtonStyled } from '../../components/Button/Button.styled'
+import { FormStyled } from '../../components/Form/Form.styled'
 
 export const SignInner = styled.div`
 	display: flex;
@@ -91,7 +92,7 @@ export const SignTitle = styled.h1`
 	margin-bottom: 25px;
 `
 
-export const SignForm = styled.form`
+export const SignForm = styled(FormStyled)`
 	margin-bottom: 10px;
 `
 

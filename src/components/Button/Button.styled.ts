@@ -5,9 +5,9 @@ import type { ButtonVariant, ButtonType } from './Button.types'
 
 interface ButtonStyledProps {
 	type: ButtonType
-	variant: ButtonVariant
-	width: string
-	disabled: boolean
+	variant?: ButtonVariant
+	width?: string
+	disabled?: boolean
 }
 
 export const ButtonStyled = styled.button<ButtonStyledProps>`
@@ -38,23 +38,34 @@ export const ButtonStyled = styled.button<ButtonStyledProps>`
 
 	padding: ${(props) => props.variant === 'big' && `12px 145px`};
 
-	padding: ${(props) => props.variant === 'submit' && `10px 16px`};
-	font-weight: ${(props) => props.variant === 'submit' && `600`};
-	font-size: ${(props) => props.variant === 'submit' && `11px`};
-	line-height: ${(props) => props.variant === 'submit' && `13px`};
+	${(props) =>
+		props.variant === 'submit' &&
+		`
+	padding: 10px 16px;
+	font-weight: 600;
+	font-size: 11px;
+	line-height: 13px; `}
 
-	color: ${(props) => props.variant === 'outlined' && baseTheme.colors.black};
-	background: ${(props) => props.variant === 'outlined' && `#fff`};
-	&:hover {
-		background: ${(props) => props.variant === 'outlined' && baseTheme.colors.accent};
-		color: ${(props) => props.variant === 'outlined' && `#fff`};
-	}
+	${(props) =>
+		props.variant === 'outlined' &&
+		`
+	color: ${baseTheme.colors.black};
+	background: #fff;
 
-	background: ${(props) => props.disabled && `#425feb75`};
-	border-color: ${(props) => props.disabled && `#425feb75`};
-	cursor: ${(props) => props.disabled && `unset`};
 	&:hover {
-		color: ${(props) => props.disabled && `#fff`};
-		background: ${(props) => props.disabled && `#425feb75`};
-	}
+		background: ${baseTheme.colors.accent};
+		color: #fff;
+	} `}
+
+	${(props) =>
+		props.disabled &&
+		`
+	border-color: #425feb75;
+	background: #425feb75;
+	cursor: unset;
+
+	&:hover {
+		background: #425feb75;
+		color: #fff;
+	} `}
 `

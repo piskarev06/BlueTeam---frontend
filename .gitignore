@@ -8,6 +8,7 @@
 # testing
 /coverage
 layouts
+/src/components/Tab
 
 # production
 /build
